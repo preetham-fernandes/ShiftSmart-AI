@@ -73,7 +73,7 @@ class ProfilePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ListTile(
-                  leading: Icon(Icons.person, color: const Color(0xFF6925EC)), // Icon color set to #6925EC
+                  leading: Icon(Icons.person, color: const Color(0xFFF3B900)), // Icon color set to #F3B900
                   title: Text('Profile Info'),
                   onTap: () {
                     // Navigate to ProfileScreen
@@ -84,35 +84,35 @@ class ProfilePage extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.bar_chart, color: const Color(0xFF6925EC)), // Icon color set to #6925EC
+                  leading: Icon(Icons.bar_chart, color: const Color(0xFFF3B900)), // Icon color set to #F3B900
                   title: Text('Statistic'),
                   onTap: () {
                     // Handle Statistic tap
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.language, color: const Color(0xFF6925EC)), // Icon color set to #6925EC
+                  leading: Icon(Icons.language, color: const Color(0xFFF3B900)), // Icon color set to #F3B900
                   title: Text('Language'),
                   onTap: () {
                     // Handle Language tap
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.settings, color: const Color(0xFF6925EC)), // Icon color set to #6925EC
+                  leading: Icon(Icons.settings, color: const Color(0xFFF3B900)), // Icon color set to #F3B900
                   title: Text('Settings'),
                   onTap: () {
                     // Handle Settings tap
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.info, color: const Color(0xFF6925EC)), // Icon color set to #6925EC
+                  leading: Icon(Icons.info, color: const Color(0xFFF3B900)), // Icon color set to #F3B900
                   title: Text('About'),
                   onTap: () {
                     // Handle About tap
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.logout, color: const Color(0xFF6925EC)), // Icon color set to #6925EC
+                  leading: Icon(Icons.logout, color: const Color(0xFFF3B900)), // Icon color set to #F3B900
                   title: Text('Logout'),
                   onTap: () {
                     // Handle Logout tap
@@ -124,7 +124,7 @@ class ProfilePage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: const Color(0xFF6925EC), // Set to #6925EC
+        selectedItemColor: const Color(0xFFF3B900), // Set to #F3B900
         unselectedItemColor: Colors.grey,
         currentIndex: 3, // Highlight the Profile item (index starts at 0)
         items: [
