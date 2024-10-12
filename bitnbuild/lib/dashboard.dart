@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:bitnbuild/profile.dart'; // Import your ProfilePage
+import 'package:bitnbuild/payroll.dart'; // Import your PayrollPage
+import 'package:bitnbuild/applyleave.dart';
+import 'package:bitnbuild/leave.dart'; // Import your ApplyLeavePage
 
 class DashboardPage extends StatelessWidget {
   @override
@@ -163,6 +166,32 @@ class DashboardPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  SizedBox(height: 20), // Add some space before the button
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Navigate to ApplyLeavePage
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LeaveApplicationForm()),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 255, 255, 255), // Corrected button color
+                        padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8), // Button shape
+                        ),
+                      ),
+                      child: Text(
+                        'Apply Leave',
+                        style: TextStyle(
+                          color: Colors.purple,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -233,7 +262,17 @@ class DashboardPage extends StatelessWidget {
           ),
         ],
         onTap: (index) {
-          if (index == 3) { // Profile icon index
+          if (index == 1) { // Payroll icon index
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PayrollPage()), // Redirect to PayrollPage
+            );
+          }else if (index == 2) { // Payroll icon index
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LeaveManagementPage()), // Redirect to PayrollPage
+            );
+          } else if (index == 3) { // Profile icon index
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => ProfilePage()), // Redirect to ProfilePage

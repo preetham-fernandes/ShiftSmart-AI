@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'profilescreen.dart'; // Import your ProfileScreen here
+import 'dashboard.dart'; // Import your Dashboard file here
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -74,7 +76,11 @@ class ProfilePage extends StatelessWidget {
                   leading: Icon(Icons.person, color: const Color(0xFF6925EC)), // Icon color set to #6925EC
                   title: Text('Profile Info'),
                   onTap: () {
-                    // Handle Profile Info tap
+                    // Navigate to ProfileScreen
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProfileScreen()), // Adjust this line
+                    );
                   },
                 ),
                 ListTile(
@@ -139,6 +145,16 @@ class ProfilePage extends StatelessWidget {
             label: 'Profile',
           ),
         ],
+        onTap: (index) {
+          if (index == 0) {
+            // Navigate to Dashboard if Home button is pressed
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => DashboardPage()), // Navigate to Dashboard
+            );
+          }
+          // Add navigation for other items if needed
+        },
       ),
     );
   }
