@@ -63,6 +63,9 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       // Implement forgot password logic here
                     },
+                    style: TextButton.styleFrom(
+                      foregroundColor: Colors.black, // Match the color of "Remember me" text
+                    ),
                     child: Text('Forgot Password?'),
                   ),
                 ],
@@ -73,7 +76,7 @@ class LoginPage extends StatelessWidget {
                 width: (MediaQuery.of(context).size.width - 30) / 4, // Set button width to 1/4th the width of the email input box
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF6925EC),
+                    backgroundColor: Color(0xFFF3B900),
                     padding: EdgeInsets.symmetric(vertical: 20),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20), // Decrease the border radius here
@@ -109,7 +112,7 @@ class LoginPage extends StatelessWidget {
                     label: Text('Sign-In With Google'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
-                      foregroundColor: Colors.blue, // Use foregroundColor instead of primary
+                      foregroundColor: Color(0xFFF3B900), // Use foregroundColor instead of primary
                     ),
                   ),
                   SizedBox(width: 10),

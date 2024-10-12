@@ -40,7 +40,7 @@ class LandingPage extends StatelessWidget {
                       TextSpan(
                         text: 'Workplace',
                         style: TextStyle(
-                          color: Color(0xFF6925EC),
+                          color: Color(0xFFF3B900), // Updated color
                         ),
                       ),
                       TextSpan(text: ' Experience'),
@@ -71,7 +71,7 @@ class LandingPage extends StatelessWidget {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF6925EC),
+                    backgroundColor: Color(0xFFF3B900), // Updated color
                     padding: EdgeInsets.symmetric(vertical: 20),
                   ),
                   onPressed: () {
@@ -89,7 +89,7 @@ class LandingPage extends StatelessWidget {
                 SizedBox(height: 10),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Color(0xFF6925EC)),
+                    side: BorderSide(color: Color(0xFFF3B900)), // Updated color
                     backgroundColor: Colors.white,
                     padding: EdgeInsets.symmetric(vertical: 20),
                   ),
@@ -103,7 +103,7 @@ class LandingPage extends StatelessWidget {
                   child: Text(
                     'Create Your Account',
                     style: TextStyle(
-                      color: Color(0xFF6925EC),
+                      color: Color(0xFFF3B900), // Updated color
                     ),
                   ),
                 ),

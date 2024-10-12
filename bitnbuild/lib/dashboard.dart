@@ -8,7 +8,7 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white, // Changed from black to white
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +31,7 @@ class DashboardPage extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Colors.black, // Changed from white to black
                         ),
                       ),
                       Text(
@@ -45,7 +45,7 @@ class DashboardPage extends StatelessWidget {
                   ),
                   Spacer(),
                   IconButton(
-                    icon: Icon(Icons.notifications, color: Colors.white),
+                    icon: Icon(Icons.notifications, color: Colors.black), // Changed icon color to black
                     onPressed: () {},
                   ),
                 ],
@@ -62,7 +62,7 @@ class DashboardPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black, // Changed from white to black
                     ),
                   ),
                   Text(
@@ -80,7 +80,7 @@ class DashboardPage extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Color(0xFF9C27B0), // Purple shade background
+                color: Color(0xFFF3B900), // Updated to a lighter shade of #F3B900
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Column(
@@ -91,7 +91,7 @@ class DashboardPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black, // Changed from white to black
                     ),
                   ),
                   SizedBox(height: 10),
@@ -103,12 +103,12 @@ class DashboardPage extends StatelessWidget {
                         children: [
                           Text(
                             '3 May, 2024',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.white), // This remains white
                           ),
                           SizedBox(height: 5),
                           Row(
                             children: [
-                              Icon(Icons.access_time, color: Colors.white),
+                              Icon(Icons.access_time, color: Colors.white), // This remains white
                               SizedBox(width: 5),
                               Text('08:00 AM', style: TextStyle(color: Colors.white)),
                             ],
@@ -116,7 +116,7 @@ class DashboardPage extends StatelessWidget {
                           SizedBox(height: 10),
                           Row(
                             children: [
-                              Icon(Icons.people, color: Colors.white),
+                              Icon(Icons.people, color: Colors.white), // This remains white
                               SizedBox(width: 5),
                               Text('Total Employee: 65', style: TextStyle(color: Colors.white)),
                             ],
@@ -124,7 +124,7 @@ class DashboardPage extends StatelessWidget {
                           SizedBox(height: 10),
                           Row(
                             children: [
-                              Icon(Icons.watch_later, color: Colors.white),
+                              Icon(Icons.watch_later, color: Colors.white), // This remains white
                               SizedBox(width: 5),
                               Text('Total Late: 12', style: TextStyle(color: Colors.white)),
                             ],
@@ -136,7 +136,7 @@ class DashboardPage extends StatelessWidget {
                         children: [
                           Text(
                             '8:45 AM',
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: Colors.white), // This remains white
                           ),
                           SizedBox(height: 5),
                           Row(
@@ -177,7 +177,7 @@ class DashboardPage extends StatelessWidget {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 255, 255, 255), // Corrected button color
+                        backgroundColor: Colors.white, // Button background stays white
                         padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8), // Button shape
@@ -186,7 +186,7 @@ class DashboardPage extends StatelessWidget {
                       child: Text(
                         'Apply Leave',
                         style: TextStyle(
-                          color: Colors.purple,
+                          color: Colors.black, // Updated text color to the lighter shade of #F3B900
                           fontSize: 16,
                         ),
                       ),
@@ -200,7 +200,7 @@ class DashboardPage extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Color(0xFF424242), // Darker background for contrast
+                color: Color(0xFFEEEEEE), // Light grey background
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Column(
@@ -211,25 +211,25 @@ class DashboardPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black, // Changed from white to black
                     ),
                   ),
                   SizedBox(height: 10),
                   ListTile(
-                    leading: Icon(Icons.design_services, color: Colors.white),
-                    title: Text('Motion Designer Interview', style: TextStyle(color: Colors.white)),
+                    leading: Icon(Icons.design_services, color: Colors.black), // Changed from white to black
+                    title: Text('Motion Designer Interview', style: TextStyle(color: Colors.black)), // Changed from white to black
                     subtitle: Text('12:00 PM - 01:00 PM', style: TextStyle(color: Colors.grey)),
                     trailing: IconButton(
-                      icon: Icon(Icons.more_vert, color: Colors.white),
+                      icon: Icon(Icons.more_vert, color: Colors.black), // Changed from white to black
                       onPressed: () {},
                     ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.meeting_room, color: Colors.white),
-                    title: Text('CEO Meeting', style: TextStyle(color: Colors.white)),
+                    leading: Icon(Icons.meeting_room, color: Colors.black), // Changed from white to black
+                    title: Text('CEO Meeting', style: TextStyle(color: Colors.black)), // Changed from white to black
                     subtitle: Text('03:00 PM - 04:00 PM', style: TextStyle(color: Colors.grey)),
                     trailing: IconButton(
-                      icon: Icon(Icons.more_vert, color: Colors.white),
+                      icon: Icon(Icons.more_vert, color: Colors.black), // Changed from white to black
                       onPressed: () {},
                     ),
                   ),
@@ -240,8 +240,8 @@ class DashboardPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black,
-        selectedItemColor: Colors.purple,
+        backgroundColor: Colors.white, // Changed from black to white
+        selectedItemColor: Color(0xFFF3B900), // Updated selected item color to lighter shade of #F3B900
         unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
@@ -267,10 +267,10 @@ class DashboardPage extends StatelessWidget {
               context,
               MaterialPageRoute(builder: (context) => PayrollPage()), // Redirect to PayrollPage
             );
-          }else if (index == 2) { // Payroll icon index
+          } else if (index == 2) { // Leave Management page index
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LeaveManagementPage()), // Redirect to PayrollPage
+              MaterialPageRoute(builder: (context) => LeaveManagementPage()), // Redirect to LeaveManagementPage
             );
           } else if (index == 3) { // Profile icon index
             Navigator.push(

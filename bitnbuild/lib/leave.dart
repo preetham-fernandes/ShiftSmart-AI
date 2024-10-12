@@ -67,14 +67,14 @@ class LeaveManagementPage extends StatelessWidget {
     );
   }
 
-  // Helper function to build a leave card with light shade of #6925EC
+  // Helper function to build a leave card with light shade of #F3B900
   Widget _buildLeaveCard(BuildContext context, String title, String value) {
     return Expanded(
       child: Container(
         height: 100,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Color(0xFF6925EC).withOpacity(0.2), // Light shade of #6925EC
+          color: Color(0xFFF3B900).withOpacity(0.2), // Light shade of #F3B900
         ),
         padding: EdgeInsets.all(16),
         child: Column(
@@ -102,7 +102,7 @@ class LeaveManagementPage extends StatelessWidget {
     );
   }
 
-  // Helper function to build detailed leave cards
+  // Helper function to build detailed leave cards with modified colors
   Widget _buildLeaveDetailsCard({
     required String title,
     required String days,
@@ -116,9 +116,9 @@ class LeaveManagementPage extends StatelessWidget {
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Colors.white,
+          color: Colors.white, // Background color of the cards set to white
           border: Border.all(
-            color: Color(0xFF6925EC).withOpacity(0.2), // Border color
+            color: Color(0xFFF3B900), // Border color set to #F3B900
             width: 1,
           ),
         ),
@@ -130,19 +130,19 @@ class LeaveManagementPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF6925EC),
+                color: const Color.fromARGB(255, 0, 0, 0), // Date text color set to yellow
               ),
             ),
             SizedBox(height: 10), // Space between title and content
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Apply Days: $days', style: TextStyle(fontSize: 16)),
-                Text('Leave Balance: $leaveBalance', style: TextStyle(fontSize: 16)),
+                Text('Apply Days: $days', style: TextStyle(fontSize: 16, color: Colors.black)),
+                Text('Leave Balance: $leaveBalance', style: TextStyle(fontSize: 16, color: Colors.black)),
               ],
             ),
             SizedBox(height: 5), // Small space between rows
-            Text('Approved By: $approvedBy', style: TextStyle(fontSize: 16)),
+            Text('Approved By: $approvedBy', style: TextStyle(fontSize: 16, color: Colors.black)),
           ],
         ),
       ),

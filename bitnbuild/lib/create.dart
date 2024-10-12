@@ -98,7 +98,7 @@ class SignUpPage extends StatelessWidget {
                 // Implement sign-up logic here
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF6925EC),
+                backgroundColor: Color(0xFFF3B900), // Changed color to #F3B900
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30), // Added horizontal padding
               ),
               child: Text(
@@ -112,6 +112,9 @@ class SignUpPage extends StatelessWidget {
               onPressed: () {
                 // Implement sign-in logic here
               },
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.black, // Changed color to black
+              ),
               child: Text('Sign in'),
             ),
             SizedBox(height: 20),
