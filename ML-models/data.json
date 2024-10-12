@@ -1,0 +1,35 @@
+[
+    { "date": "2024-10-19", "staffRequired": 28, "footTraffic": 280, "holiday": false, "eventBooking": false, "specialPromotion": false },
+    { "date": "2024-10-20", "staffRequired": 32, "footTraffic": 320, "holiday": true, "eventBooking": false, "specialPromotion": true },
+    { "date": "2024-10-21", "staffRequired": 25, "footTraffic": 250, "holiday": false, "eventBooking": true, "specialPromotion": false },
+    { "date": "2024-10-22", "staffRequired": 30, "footTraffic": 300, "holiday": false, "eventBooking": true, "specialPromotion": true },
+    { "date": "2024-10-23", "staffRequired": 20, "footTraffic": 200, "holiday": false, "eventBooking": false, "specialPromotion": true },
+    { "date": "2024-10-24", "staffRequired": 35, "footTraffic": 350, "holiday": true, "eventBooking": true, "specialPromotion": false },
+    { "date": "2024-10-25", "staffRequired": 27, "footTraffic": 270, "holiday": false, "eventBooking": false, "specialPromotion": false },
+    { "date": "2024-10-26", "staffRequired": 22, "footTraffic": 230, "holiday": false, "eventBooking": true, "specialPromotion": true },
+    { "date": "2024-10-27", "staffRequired": 31, "footTraffic": 320, "holiday": true, "eventBooking": false, "specialPromotion": false },
+    { "date": "2024-10-28", "staffRequired": 24, "footTraffic": 240, "holiday": false, "eventBooking": true, "specialPromotion": false },
+    
+    { "date": "2024-11-01", "staffRequired": 26, "footTraffic": 260, "holiday": false, "eventBooking": false, "specialPromotion": false },
+    { "date": "2024-11-02", "staffRequired": 34, "footTraffic": 340, "holiday": true, "eventBooking": true, "specialPromotion": true },
+    { "date": "2024-11-03", "staffRequired": 29, "footTraffic": 290, "holiday": false, "eventBooking": true, "specialPromotion": false },
+    { "date": "2024-11-04", "staffRequired": 23, "footTraffic": 220, "holiday": false, "eventBooking": false, "specialPromotion": true },
+    { "date": "2024-11-05", "staffRequired": 28, "footTraffic": 280, "holiday": true, "eventBooking": true, "specialPromotion": false },
+    { "date": "2024-11-06", "staffRequired": 19, "footTraffic": 200, "holiday": false, "eventBooking": false, "specialPromotion": false },
+    { "date": "2024-11-07", "staffRequired": 30, "footTraffic": 300, "holiday": true, "eventBooking": false, "specialPromotion": true },
+    { "date": "2024-11-08", "staffRequired": 25, "footTraffic": 250, "holiday": false, "eventBooking": true, "specialPromotion": true },
+    { "date": "2024-11-09", "staffRequired": 32, "footTraffic": 310, "holiday": false, "eventBooking": false, "specialPromotion": true },
+    { "date": "2024-11-10", "staffRequired": 27, "footTraffic": 270, "holiday": true, "eventBooking": true, "specialPromotion": false },
+    
+    { "date": "2024-12-01", "staffRequired": 22, "footTraffic": 220, "holiday": false, "eventBooking": false, "specialPromotion": true },
+    { "date": "2024-12-02", "staffRequired": 35, "footTraffic": 340, "holiday": true, "eventBooking": true, "specialPromotion": true },
+    { "date": "2024-12-03", "staffRequired": 30, "footTraffic": 300, "holiday": false, "eventBooking": true, "specialPromotion": false },
+    { "date": "2024-12-04", "staffRequired": 23, "footTraffic": 230, "holiday": false, "eventBooking": false, "specialPromotion": false },
+    { "date": "2024-12-05", "staffRequired": 28, "footTraffic": 290, "holiday": false, "eventBooking": true, "specialPromotion": false },
+    { "date": "2024-12-06", "staffRequired": 25, "footTraffic": 250, "holiday": false, "eventBooking": false, "specialPromotion": true },
+    { "date": "2024-12-07", "staffRequired": 31, "footTraffic": 310, "holiday": true, "eventBooking": true, "specialPromotion": false },
+    { "date": "2024-12-08", "staffRequired": 26, "footTraffic": 260, "holiday": false, "eventBooking": false, "specialPromotion": true },
+    { "date": "2024-12-09", "staffRequired": 33, "footTraffic": 330, "holiday": true, "eventBooking": true, "specialPromotion": true },
+    { "date": "2024-12-10", "staffRequired": 29, "footTraffic": 300, "holiday": false, "eventBooking": true, "specialPromotion": false }
+]
+  
