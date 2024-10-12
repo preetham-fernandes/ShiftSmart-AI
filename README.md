@@ -8,7 +8,7 @@
 </ul>
 <hr>
 <p>Tech Stack</p>
-<p>WebApp: React.js, Node.js, Express.js, Firebase</p>
+<p>WebApp: React.js, Node.js, Express.js, Firebase, TensorFlow</p>
 <p>Mobile App: Flutter, Firebase</p>
 
 
