@@ -35,7 +35,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                   SizedBox(height: 16),
                   Text(
-                    'Mohamed Hussien',
+                    'Alina Rai',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -46,7 +46,7 @@ class ProfilePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween, // Space between address and task completion
                     children: [
                       Text(
-                        'Alexandria, Egypt',
+                        'Mumbai,India',
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.grey,

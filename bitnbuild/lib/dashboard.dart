@@ -27,7 +27,7 @@ class DashboardPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Wade Warren',
+                        'Alina Rai',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class DashboardPage extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'Human Resource Manager',
+                        'Manager',
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.grey,

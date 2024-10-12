@@ -123,7 +123,7 @@ class _LeaveApplicationFormState extends State<LeaveApplicationForm> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF6925EC), // Set button color
+                    backgroundColor: const Color(0xFFF3B900), // Changed color to #F3B900
                     foregroundColor: Colors.white, // Set text color to white
                   ),
                   child: const Text('Apply Leave'),

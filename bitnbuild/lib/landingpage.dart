@@ -49,7 +49,7 @@ class LandingPage extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  'Get Ready to Simplify Your HR Tasks! Team Tune Makes Managing Employee Attendance, Departments, and Payroll Effortless.',
+                  'Get Ready to Simplify Your HR Tasks! ShiftSmart AI Makes Managing Employee Attendance, Shifts, and Payroll Effortless.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,
