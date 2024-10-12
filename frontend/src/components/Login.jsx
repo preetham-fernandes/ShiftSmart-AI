@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'; 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -6,28 +6,62 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 import { Clock } from "lucide-react";
+import { db } from '../firebase/Firebase'; // Firebase Firestore config
+import { collection, query, where, getDocs } from 'firebase/firestore'; 
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate(); // Initialize useNavigate for routing
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Simulate login (here you can add your login logic)
-    console.log('Logging in with:', { email, password, role });
+    if (!email || !password || !role) {
+      setError('Please fill in all fields.');
+      return;
+    }
 
-    // Redirect based on user role
-    if (role === 'employee') {
-      navigate('/dashboard/employee');
-    } else if (role === 'admin') {
-      navigate('/dashboard/admin');
-    } else if (role === 'superadmin') {
-      navigate('/dashboard/superadmin');
-    } else {
-      console.log('Unknown role, cannot redirect.');
+    try {
+      let collectionName = '';
+
+      // Determine the correct collection based on the selected role
+      if (role === 'employee') {
+        collectionName = 'employee';
+      } else if (role === 'admin') {
+        collectionName = 'admin';
+      } else if (role === 'superadmin') {
+        collectionName = 'superadmin';
+      }
+
+      // Query the Firestore collection to check if the user exists and verify credentials
+      const userQuery = query(
+        collection(db, collectionName), 
+        where('email', '==', email), 
+        where('password', '==', password)  // This is only for demonstration; passwords should be hashed in production!
+      );
+      
+      const querySnapshot = await getDocs(userQuery);
+      
+      if (!querySnapshot.empty) {
+        console.log('Login successful!');
+
+        // Redirect based on user role
+        if (role === 'employee') {
+          navigate('/dashboard/employee');
+        } else if (role === 'admin') {
+          navigate('/dashboard/admin');
+        } else if (role === 'superadmin') {
+          navigate('/dashboard/superadmin');
+        }
+      } else {
+        setError('Invalid email or password.');
+      }
+    } catch (error) {
+      console.error('Error logging in:', error);
+      setError('An error occurred. Please try again.');
     }
   };
 
@@ -85,6 +119,7 @@ export default function Login() {
                   </Select>
                 </div>
               </div>
+              {error && <p className="text-red-600">{error}</p>}
               <Button type="submit" className="w-full mt-6 bg-[#F3B900] text-[#1D1D1B] hover:bg-[#E30613] hover:text-white transition-colors">
                 Log In
               </Button>

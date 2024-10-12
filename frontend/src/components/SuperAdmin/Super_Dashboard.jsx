@@ -92,7 +92,7 @@ export default function Super_Dashboard() {
         {/* Main content */}
         <div className="flex-1 flex flex-col overflow-hidden">
           <header className="bg-white border-b border-gray-200 p-4 flex justify-between items-center">
-            <h2 className="text-2xl font-semibold text-[#1D1D1B]">Dashboard</h2>
+            <h2 className="text-2xl font-semibold text-[#1D1D1B]"></h2>
             <div className="flex items-center space-x-4">
               <Button variant="outline" size="icon">
                 <Bell className="h-4 w-4" />
