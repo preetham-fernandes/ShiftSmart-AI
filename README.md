@@ -11,7 +11,7 @@
 <p>WebApp: React.js, Node.js, Express.js, Firebase, TensorFlow</p>
 <p>Mobile App: Flutter, Firebase</p>
 
-Moblie App
+
 ![Screenshot 2024-10-12 165451](https://github.com/user-attachments/assets/6792d30d-7719-4796-98ac-bd6d85fabc47)
 ![Screenshot 2024-10-12 165516](https://github.com/user-attachments/assets/b40083e4-01ed-4830-8032-1d96fd79ab61)
 ![Screenshot 2024-10-12 165535](https://github.com/user-attachments/assets/36ce5741-2ac3-498b-a190-1fc5c4d48ab9)
