@@ -9,6 +9,9 @@
 <hr>
 <p>Tech Stack</p>
 <p>WebApp: React.js, Node.js, Express.js, Firebase, TensorFlow</p>
+<p>Mobile App: Flutter, Firebase</p>
+
+
 ![Screenshot 2024-10-12 170046](https://github.com/user-attachments/assets/bc1c26ac-d8b8-4484-8574-60745fb9ae55)
 ![Screenshot 2024-10-12 170310](https://github.com/user-attachments/assets/1229649b-86c4-447c-97f1-5f4cf12087f5)
 ![Screenshot 2024-10-12 170343](https://github.com/user-attachments/assets/43cceff5-009d-4924-8c18-406d9ab797a1)
@@ -22,7 +25,7 @@
 ![Screenshot 2024-10-12 171414](https://github.com/user-attachments/assets/afeb518a-fb39-48e6-90d2-ea57365755ca)
 ![Screenshot 2024-10-12 171432](https://github.com/user-attachments/assets/8e72e4d9-9498-4ab2-a68f-2359ab867d14)
 
-<p>Mobile App: Flutter, Firebase</p>
+
 ![Screenshot 2024-10-12 165451](https://github.com/user-attachments/assets/6792d30d-7719-4796-98ac-bd6d85fabc47)
 ![Screenshot 2024-10-12 165516](https://github.com/user-attachments/assets/b40083e4-01ed-4830-8032-1d96fd79ab61)
 ![Screenshot 2024-10-12 165535](https://github.com/user-attachments/assets/36ce5741-2ac3-498b-a190-1fc5c4d48ab9)
