@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:bitnbuild/profile.dart'; // Import your ProfilePage
 import 'package:bitnbuild/payroll.dart'; // Import your PayrollPage
 import 'package:bitnbuild/applyleave.dart';
-import 'package:bitnbuild/leave.dart'; // Import your ApplyLeavePage
+import 'package:bitnbuild/leave.dart'; // Import your LeaveManagementPage
+import 'package:bitnbuild/SwitchShiftPage.dart'; // Import your SwitchShiftPage
 
 class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // Changed from black to white
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,15 +28,15 @@ class DashboardPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Alina Rai',
+                        'Wade Warren',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black, // Changed from white to black
+                          color: Colors.black,
                         ),
                       ),
                       Text(
-                        'Manager',
+                        'Human Resource Manager',
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.grey,
@@ -45,7 +46,7 @@ class DashboardPage extends StatelessWidget {
                   ),
                   Spacer(),
                   IconButton(
-                    icon: Icon(Icons.notifications, color: Colors.black), // Changed icon color to black
+                    icon: Icon(Icons.notifications, color: Colors.black),
                     onPressed: () {},
                   ),
                 ],
@@ -62,7 +63,7 @@ class DashboardPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black, // Changed from white to black
+                      color: Colors.black,
                     ),
                   ),
                   Text(
@@ -80,7 +81,7 @@ class DashboardPage extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Color(0xFFF3B900), // Updated to a lighter shade of #F3B900
+                color: Color(0xFFF3B900),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Column(
@@ -91,7 +92,7 @@ class DashboardPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black, // Changed from white to black
+                      color: Colors.black,
                     ),
                   ),
                   SizedBox(height: 10),
@@ -101,14 +102,11 @@ class DashboardPage extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            '3 May, 2024',
-                            style: TextStyle(color: Colors.white), // This remains white
-                          ),
+                          Text('3 May, 2024', style: TextStyle(color: Colors.white)),
                           SizedBox(height: 5),
                           Row(
                             children: [
-                              Icon(Icons.access_time, color: Colors.white), // This remains white
+                              Icon(Icons.access_time, color: Colors.white),
                               SizedBox(width: 5),
                               Text('08:00 AM', style: TextStyle(color: Colors.white)),
                             ],
@@ -116,7 +114,7 @@ class DashboardPage extends StatelessWidget {
                           SizedBox(height: 10),
                           Row(
                             children: [
-                              Icon(Icons.people, color: Colors.white), // This remains white
+                              Icon(Icons.people, color: Colors.white),
                               SizedBox(width: 5),
                               Text('Total Employee: 65', style: TextStyle(color: Colors.white)),
                             ],
@@ -124,7 +122,7 @@ class DashboardPage extends StatelessWidget {
                           SizedBox(height: 10),
                           Row(
                             children: [
-                              Icon(Icons.watch_later, color: Colors.white), // This remains white
+                              Icon(Icons.watch_later, color: Colors.white),
                               SizedBox(width: 5),
                               Text('Total Late: 12', style: TextStyle(color: Colors.white)),
                             ],
@@ -134,10 +132,7 @@ class DashboardPage extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            '8:45 AM',
-                            style: TextStyle(color: Colors.white), // This remains white
-                          ),
+                          Text('8:45 AM', style: TextStyle(color: Colors.white)),
                           SizedBox(height: 5),
                           Row(
                             children: [
@@ -177,16 +172,16 @@ class DashboardPage extends StatelessWidget {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white, // Button background stays white
+                        backgroundColor: Colors.white,
                         padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8), // Button shape
+                          borderRadius: BorderRadius.circular(8),
                         ),
                       ),
                       child: Text(
                         'Apply Leave',
                         style: TextStyle(
-                          color: Colors.black, // Updated text color to the lighter shade of #F3B900
+                          color: Colors.black,
                           fontSize: 16,
                         ),
                       ),
@@ -195,7 +190,7 @@ class DashboardPage extends StatelessWidget {
                 ],
               ),
             ),
-            // What's up Today section - New Card
+            // What's up Today section - Updated Card with Switch Shift functionality
             Container(
               margin: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
               padding: EdgeInsets.all(16),
@@ -211,26 +206,30 @@ class DashboardPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black, // Changed from white to black
+                      color: Colors.black,
                     ),
                   ),
                   SizedBox(height: 10),
                   ListTile(
-                    leading: Icon(Icons.design_services, color: Colors.black), // Changed from white to black
-                    title: Text('Motion Designer Interview', style: TextStyle(color: Colors.black)), // Changed from white to black
+                    leading: Icon(Icons.design_services, color: Colors.black),
+                    title: Text('Motion Designer Interview', style: TextStyle(color: Colors.black)),
                     subtitle: Text('12:00 PM - 01:00 PM', style: TextStyle(color: Colors.grey)),
                     trailing: IconButton(
-                      icon: Icon(Icons.more_vert, color: Colors.black), // Changed from white to black
-                      onPressed: () {},
+                      icon: Icon(Icons.more_vert, color: Colors.black),
+                      onPressed: () {
+                        _showMoreOptions(context);
+                      },
                     ),
                   ),
                   ListTile(
-                    leading: Icon(Icons.meeting_room, color: Colors.black), // Changed from white to black
-                    title: Text('CEO Meeting', style: TextStyle(color: Colors.black)), // Changed from white to black
+                    leading: Icon(Icons.meeting_room, color: Colors.black),
+                    title: Text('CEO Meeting', style: TextStyle(color: Colors.black)),
                     subtitle: Text('03:00 PM - 04:00 PM', style: TextStyle(color: Colors.grey)),
                     trailing: IconButton(
-                      icon: Icon(Icons.more_vert, color: Colors.black), // Changed from white to black
-                      onPressed: () {},
+                      icon: Icon(Icons.more_vert, color: Colors.black),
+                      onPressed: () {
+                        _showMoreOptions(context);
+                      },
                     ),
                   ),
                 ],
@@ -240,8 +239,8 @@ class DashboardPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white, // Changed from black to white
-        selectedItemColor: Color(0xFFF3B900), // Updated selected item color to lighter shade of #F3B900
+        backgroundColor: Colors.white,
+        selectedItemColor: Color(0xFFF3B900),
         unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
@@ -262,23 +261,70 @@ class DashboardPage extends StatelessWidget {
           ),
         ],
         onTap: (index) {
-          if (index == 1) { // Payroll icon index
+          if (index == 1) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => PayrollPage()), // Redirect to PayrollPage
+              MaterialPageRoute(builder: (context) => PayrollPage()),
             );
-          } else if (index == 2) { // Leave Management page index
+          } else if (index == 2) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LeaveManagementPage()), // Redirect to LeaveManagementPage
+              MaterialPageRoute(builder: (context) => LeaveManagementPage()),
             );
-          } else if (index == 3) { // Profile icon index
+          } else if (index == 3) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ProfilePage()), // Redirect to ProfilePage
+              MaterialPageRoute(builder: (context) => ProfilePage()),
             );
           }
         },
+      ),
+    );
+  }
+
+  void _showMoreOptions(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Wrap(
+          children: [
+            ListTile(
+              leading: Icon(Icons.swap_horiz),
+              title: Text('Switch Shift'),
+              onTap: () {
+                Navigator.pop(context); // Close the bottom sheet
+                // Navigate to SwitchShiftPage
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SwitchShiftPage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.cancel),
+              title: Text('Cancel'),
+              onTap: () {
+                Navigator.pop(context); // Close the bottom sheet
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
+// Placeholder for SwitchShiftPage
+class SwitchShiftPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Switch Shift'),
+        backgroundColor: Color(0xFFF3B900),
+      ),
+      body: Center(
+        child: Text('Available employees for shift switching will be listed here.'),
       ),
     );
   }
