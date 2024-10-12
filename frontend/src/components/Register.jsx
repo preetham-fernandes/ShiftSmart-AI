@@ -4,8 +4,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Link } from 'react-router-dom';  // Replace with react-router-dom Link
+import { Link } from 'react-router-dom';  
 import { Clock, User, Users, UserCog } from "lucide-react";
+import { db } from '../firebase/Firebase'; // Import your Firebase config
+import { collection, addDoc, Timestamp, updateDoc, doc } from 'firebase/firestore'; 
 
 export default function Register() {
   const [userType, setUserType] = useState('');
@@ -28,10 +30,71 @@ export default function Register() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    console.log('Registering user:', { userType, ...formData });
-    console.log('Redirecting to appropriate dashboard...');
+
+    try {
+      const createdAt = Timestamp.now();
+      let docRef;
+
+      if (userType === 'employee') {
+        // Add employee document and get Firestore-generated ID
+        docRef = await addDoc(collection(db, 'employee'), {
+          name: formData.name,
+          email: formData.email,
+          password: formData.password, // Store the password securely!
+          role: formData.role,
+          location: formData.location,
+          shift_preference: formData.shiftPreference,
+          gender: formData.gender,
+          availability: true,
+          last_shift: null,
+          hours_worked: 0,
+          created_at: createdAt,
+          status: 'Active'
+        });
+
+      } else if (userType === 'admin') {
+        // Add admin document and get Firestore-generated ID
+        docRef = await addDoc(collection(db, 'admin'), {
+          name: formData.restaurantName,
+          email: formData.email,
+          password: formData.password, // Store the password securely!
+          created_at: createdAt,
+          location:formData.location,c
+        });
+
+      } else if (userType === 'superadmin') {
+        // Add superadmin document and get Firestore-generated ID
+        docRef = await addDoc(collection(db, 'superadmin'), {
+          email: formData.email,
+          password: formData.password, // Store the password securely!
+          created_at: createdAt
+        });
+      }
+
+      // Update the document to include Firestore-generated ID
+      await updateDoc(doc(db, userType, docRef.id), {
+        id: docRef.id
+      });
+
+      console.log(`${userType} registered with ID:`, docRef.id);
+
+      // Clear the form data after successful registration
+      setFormData({
+        name: '',
+        email: '',
+        password: '',
+        role: '',
+        restaurantName: '',
+        location: '',
+        shiftPreference: '',
+        gender: ''
+      });
+      setUserType(''); // Reset user type
+    } catch (error) {
+      console.error('Error registering user:', error);
+    }
   };
 
   return (
@@ -135,33 +198,25 @@ export default function Register() {
 
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-[#1D1D1B]">Email</Label>
-                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required className="border-[#858992] focus:border-[#F3B900] focus:ring-[#F3B900]" />
+                  <Input id="email" name="email" value={formData.email} onChange={handleInputChange} required type="email" className="border-[#858992] focus:border-[#F3B900] focus:ring-[#F3B900]" />
                 </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="password" className="text-[#1D1D1B]">Password</Label>
-                  <Input id="password" name="password" type="password" value={formData.password} onChange={handleInputChange} required className="border-[#858992] focus:border-[#F3B900] focus:ring-[#F3B900]" />
+                  <Input id="password" name="password" value={formData.password} onChange={handleInputChange} required type="password" className="border-[#858992] focus:border-[#F3B900] focus:ring-[#F3B900]" />
                 </div>
-                <Button type="submit" className="w-full mt-6 bg-[#F3B900] text-[#1D1D1B] hover:bg-[#E30613] hover:text-white transition-colors">
-                  Register
-                </Button>
+
+                <Button type="submit" className="w-full text-lg bg-[#F3B900] hover:bg-yellow-500">Register</Button>
               </form>
             )}
           </CardContent>
-          <CardFooter className="flex justify-between">
-            <Link to="/login" className="text-sm text-[#E30613] hover:underline">
-              Already have an account? Log in
-            </Link>
-            {userType && (
-              <Button variant="outline" onClick={() => setUserType('')} className="text-[#1D1D1B] border-[#1D1D1B] hover:bg-[#F3B900]">
-                Change User Type
-              </Button>
-            )}
+          <CardFooter className="flex justify-center">
+            <p className="text-sm text-[#1D1D1B]">
+              Already have an account? <Link to="/login" className="font-semibold text-[#F3B900] hover:text-yellow-500">Login here</Link>
+            </p>
           </CardFooter>
         </Card>
       </main>
-      <footer className="py-6 text-center text-sm text-[#F3B900] bg-[#1D1D1B]">
-        © 2024 ShiftSmart AI. All rights reserved.
-      </footer>
     </div>
   );
 }
